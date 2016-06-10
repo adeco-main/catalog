@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sherdle.universal">
+
+    <!-- Always Required to get content and check if internet is available -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Always Required for image coaching & maps -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- Required for RSS Service -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- Required for maps -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- Required for visualizer & radio -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- Required for tumblr -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <!-- Required for in-app purchases -->
+    <uses-permission android:name="com.android.vending.BILLING"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:name="com.orm.SugarApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="sugar_example.db"/>
+        <meta-data
+            android:name="VERSION"
+            android:value="1"/>
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true"/>
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.sherdle.universal"/>
+
+        <!-- Activities -->
+        <activity
+            android:name=".activity.LoadingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".offers.OfferWallActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/offerwal_activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"/>
+
+
+        <!-- UserNotification -->
+        <receiver
+            android:name=".notif.BootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".notif.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <!-- Meta Data -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+    </application>
+
+</manifest>

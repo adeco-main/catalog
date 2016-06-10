@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppName</string>
+    
+    <!-- Enter your Google Play billing details to enable In-App purchases -->
+    <string name="google_play_license"></string>
+	<string name="product_id"></string>
+	
+    <!-- Strings for optional translation below this line -->
+
+    <!-- offerwall -->
+    <string name="offerwal_activity">Related Apps</string>
+    
+    <!--  webview  -->
+    <string name="error_received">Problem loading page</string>
+    <string name="no_connection">No connection</string>
+    <string name="webview_title">Web</string>
+    <string name="alert">Alert</string>
+    <string name="back_webview">Back</string>
+    <string name="forward_webview">Forward</string>
+    
+    <string name="web_share_begin">"Look what I saw in the \""</string>
+    <string name="web_share_end">"\"app: "</string>
+    
+    <!-- settings -->
+    <string name="settings_general_summary">Username and password information</string>
+    <string name="settings_general">General</string>
+    
+    <string name="settings_showmenu_summary">Yes/No</string>
+    <string name="settings_showmenu">Show side menu on start</string>
+    
+    <string name="settings_rssnotify_summary">Get informed when there are new articles</string>
+    <string name="settings_rssnotify">Notifications</string>
+    
+    <string name="settings_fontsize_summary">Preferred text size for articles and posts</string>
+    <string name="settings_fontsize">Text size</string>
+    
+    <string name="settings_fontsize_xl">Extra Large</string>
+    <string name="settings_fontsize_l">Large</string>
+    <string name="settings_fontsize_m">Default</string>
+    <string name="settings_fontsize_s">Small</string>
+    <string name="settings_fontsize_xs">Extra Small</string>
+    
+    <string name="settings_other_summary">Other information</string>
+    <string name="settings_other">Other</string>
+    
+    <string name="settings_aboutus_summary">Information about our application</string>
+    <string name="settings_aboutus">About</string>
+    
+    <string name="settings_rate_summary">Help other users enjoy this application</string>
+    <string name="settings_rate">Rate this app</string>
+
+    <string name="settings_share_summary">Tell about this app to your friends</string>
+    <string name="settings_share">Share</string>
+
+    <string name="settings_billing_summary">Manage your In-App purchases</string>
+    <string name="settings_billing">In-App Products</string>
+    
+    <string name="settings_purchase_summary">Removes ads and unlocks more content</string>
+    <string name="settings_purchase">Unlock extra features</string>
+    
+    <string name="settings_restore_purchase_success">Previous purchases have been restored.</string>
+    <string name="settings_purchase_success">Previous purchases have been restored.</string>
+    <string name="settings_purchase_fail">Purchase failed.</string>
+  
+    <string name="dialog_purchase_title">Content locked.</string>
+    <string name="dialog_purchase">In order to view this content, you need to unlock the full version by making a one time purchase.\n\nThis will also remove advertisements throughout the app.</string>
+
+    <!-- tumblr -->
+    <string name="image_descr">Image</string>
+    <string name="set">Set</string>
+    <string name="save">Save</string>
+    <string name="tumblr_share_begin">Check out this post I saw in</string>
+    <string name="saved">Saved at:</string>
+    <string name="set_confirm">Are you sure you would like to set this image as wallpaper?</string>
+    <string name="set_success">You have set a new Wallpaper!</string>
+    
+    <!-- general-->
+    <string name="settings">Settings</string>
+    <string name="share_header">Share</string>
+    <string name="about_header">About</string>
+    <string name="favorite_button">Favorite</string>
+    <string name="open_button">Open</string>
+    <string name="textview_date">"Date: "</string>
+    <string name="loading">Loading..</string>
+    <string name="opening_video">Opening video</string>
+    <string name="opening_audio">Opening audio</string>
+    <string name="downloading">Downloading..</string>
+    <string name="empty_textview">Error loading data</string>
+    <string name="no_results">No results</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="comments">Comments</string>
+    <string name="section">Section</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate</string>
+    <string name="info">Info</string>
+    <string name="refresh">Refresh</string>
+    <string name="search">Search</string>
+    <string name="welcome">Welcome</string>
+    <string name="already_loading">We are already loading some new content!</string>
+    
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="not_back">There is nothing to go back to</string>
+    
+    <string name="permissions_required">You need to accept all required permissions to access this content.</string>
+    
+    <!-- Connection dialogs -->
+    <string name="dialog_connection_title">No connection</string>
+    <string name="dialog_connection_description">We can not reach our servers at the moment.\n\nYou can always check you favorites and other items using the menu!</string>
+    <string name="dialog_internet_title">No internet</string>
+    <string name="dialog_internet_description">You seem to have no internet connection, this app requires internet to get the latest content.\n\nYou can continue to see your favorite/offline items!</string>
+
+
+</resources>

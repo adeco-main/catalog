@@ -1,0 +1,157 @@
+{
+  "navigation_items": [
+    {
+      "title": "CustomFragment1",
+      "icon": "ic_apps",
+      "fragment": "CustomFragment",
+      "visible": true,
+      "elements": [
+        {
+          "id": "settings_element",
+          "background_color": "",
+          "background_image": "http://googlenexuswallpaper.org/media/images/1/1/1156.jpg"
+        },
+        {
+          "id": "text_element",
+          "text_color": "#FF4081",
+          "text_size": 16,
+          "text_link": "",
+          "text_gravity": "left",
+          "text_fonts": "Roboto-Regular.ttf",
+          "text_typeface": "bold_italic",
+          "text_content": "Text Content ${newline} new line ${tabulate} tabulate ${return} return ${doublequote} doublequote"
+        },
+        {
+          "id": "text_element",
+          "text_color": "#FF4081",
+          "text_size": 0,
+          "text_link": "",
+          "text_gravity": "right",
+          "text_fonts": "Roboto-Regular.ttf",
+          "text_typeface": "normal",
+          "text_content": "SIMPLE EXAMPLE TEXT"
+        },
+        {
+          "id": "text_element",
+          "text_color": "#FFFFFF",
+          "text_size": 0,
+          "text_link": "http://google.com",
+          "text_gravity": "left",
+          "text_fonts": "Roboto-Regular.ttf",
+          "text_typeface": "bold",
+          "text_content": "HELLO I'M LINK, TOUCH ME"
+        },
+        {
+          "id": "text_element",
+          "text_color": "#FFFFFF",
+          "text_size": 0,
+          "text_link": "http://google.com",
+          "text_gravity": "center",
+          "text_fonts": "",
+          "text_typeface": "italic",
+          "text_content": "HELLO I'M LINK, TOUCH ME"
+        },
+        {
+          "id": "image_element",
+          "image_gravity": "left",
+          "image_url": "http://bellard.org/bpg/3.png",
+          "link_url": "http://google.com"
+        }
+      ]
+    },
+    {
+      "title": "CustomFragment2",
+      "icon": "ic_done",
+      "fragment": "CustomFragment",
+      "visible": true,
+      "elements": [
+        {
+          "id": "settings_element",
+          "background_color": "#1bdae1",
+          "background_image": ""
+        },
+        {
+          "id": "button_element",
+          "button_text": "Button Text",
+          "button_text_size": 30,
+          "button_text_color": "#3F51B5",
+          "button_color": "#FF4081",
+          "button_url": "google.com",
+          "button_fragment": "",
+          "button_gravity": "left"
+        },
+        {
+          "id": "button_element",
+          "button_text": "Button Text",
+          "button_text_size": 0,
+          "button_text_color": "",
+          "button_color": "",
+          "button_url": "",
+          "button_fragment": "CustomFragment1",
+          "button_gravity": "left"
+        },
+        {
+          "id": "list_element",
+          "list_title": "Title text",
+          "list_description": "Description example text",
+          "list_image_url": "https://lh6.ggpht.com/1eVPA6Iukw-F4i5xq1ZWicaKBzmprLGw98YhdG20E-wlsHHg3PcKJqbY_fWLdJeGRw=w300",
+          "list_link_url": "",
+          "list_fragment": "CustomFragment1",
+          "list_text_button": "Install",
+          "list_text_size": 0,
+          "list_button_text_color": "#FFFFFF",
+          "list_button_color": "#1cd1a0",
+          "list_type": 1
+        },
+        {
+          "id": "native_offer_element"
+        },
+        {
+          "id": "list_element",
+          "list_title": "Title text",
+          "list_description": "Description example text",
+          "list_image_url": "https://lh6.ggpht.com/1eVPA6Iukw-F4i5xq1ZWicaKBzmprLGw98YhdG20E-wlsHHg3PcKJqbY_fWLdJeGRw=w300",
+          "list_link_url": "",
+          "list_fragment": "CustomFragment1",
+          "list_text_button": "Install",
+          "list_text_size": 0,
+          "list_button_text_color": "#FFFFFF",
+          "list_button_color": "#1cd1a0",
+          "list_type": 2
+        },
+        {
+          "id": "native_ads_element"
+        },
+        {
+          "id": "list_element",
+          "list_title": "Title text",
+          "list_description": "Description example text",
+          "list_image_url": "https://lh3.googleusercontent.com/jv0hX7L1mtQx45w2QCnf75GJW7X4Ra_MIkHVkRF3_8FKoLowPzUlAOxRpDBmkXfv8Ek=h900",
+          "list_link_url": "",
+          "list_fragment": "CustomFragment1",
+          "list_text_button": "Install",
+          "list_text_size": 0,
+          "list_button_text_color": "#FFFFFF",
+          "list_button_color": "#1cd1a0",
+          "list_type": 3
+        }
+      ]
+    }
+  ],
+  "notification": {
+    "text": "Text",
+    "hours": 30
+  },
+  "style": {
+    "toolbar": "#FF9800",
+    "tablayout": "#FF9800",
+    "statusbar": "#FF9800",
+    "drawerhead": "#FF9800"
+  },
+  "settings": {
+    "admob_banner_id": "ca-app-pub-3940256099942544/6300978111",
+    "admob_interstitial_id": "ca-app-pub-3940256099942544/1033173712",
+    "admob_native_id": "",
+    "analytics_id": ""
+  }
+}
