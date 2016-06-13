@@ -220,7 +220,7 @@ public class JSONLocalParser {
                 settingsVisible = jsonObject.optBoolean("settings_visible");
             }
         }
-        host = (Helper.IS_DEBUG ? "http://test.ru/" : "http://111.111.111.111:8000");
+        host = (Helper.IS_DEBUG ? "http://test.ru/" : "185.26.120.195:8001");
         SettingsObject settingsObject = new SettingsObject(
                 bannerID,
                 interstitialID,
