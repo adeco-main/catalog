@@ -196,7 +196,7 @@ public class JSONLocalParser {
 
     public void getSettingsApplication() throws IOException, JSONException {
         JSONObject data = getDataStorageContent();
-        String bannerID = "", interstitialID = "", nativeID = "", analyticsID = "UA-71426530-26", host;
+        String bannerID = "", interstitialID = "", nativeID = "", analyticsID = "", host;
         boolean offerwallVisible = true, shareVisible = true, rateVisible = true, settingsVisible = true;
         if (!data.isNull("settings")) {
             JSONObject jsonObject = data.getJSONObject("settings");

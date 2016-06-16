@@ -129,24 +129,26 @@ public class LoadingActivity extends AppParrentActivity {
 
     private void initGoogleAnalytics(boolean isFirstRun) {
         List<SettingsObject> settingsObjectList = SettingsObject.listAll(SettingsObject.class);
-        GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
-        analytics.setLocalDispatchPeriod(1800);
-        Tracker tracker = analytics.newTracker(settingsObjectList.get(0).getAnalyticsID());
-        tracker.enableExceptionReporting(true);
-        tracker.enableAdvertisingIdCollection(true);
-        tracker.enableAutoActivityTracking(true);
-        tracker.setScreenName(getClass().getName());
-        tracker.send(new HitBuilders.EventBuilder()
-                .setCategory("Application")
-                .setAction("Launch")
-                .setLabel(getPackageName())
-                .build());
-        if (isFirstRun) {
+        if (!settingsObjectList.get(0).getAnalyticsID().equals("")) {
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+            analytics.setLocalDispatchPeriod(1800);
+            Tracker tracker = analytics.newTracker(settingsObjectList.get(0).getAnalyticsID());
+            tracker.enableExceptionReporting(true);
+            tracker.enableAdvertisingIdCollection(true);
+            tracker.enableAutoActivityTracking(true);
+            tracker.setScreenName(getClass().getName());
             tracker.send(new HitBuilders.EventBuilder()
                     .setCategory("Application")
-                    .setAction("Download")
+                    .setAction("Launch")
                     .setLabel(getPackageName())
                     .build());
+            if (isFirstRun) {
+                tracker.send(new HitBuilders.EventBuilder()
+                        .setCategory("Application")
+                        .setAction("Download")
+                        .setLabel(getPackageName())
+                        .build());
+            }
         }
         Log.d(TAG, "initGoogleAnalytics: " + getPackageName());
     }
