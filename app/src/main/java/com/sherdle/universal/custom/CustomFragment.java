@@ -228,35 +228,7 @@ public class CustomFragment extends Fragment {
         layoutParams.setMargins(marginLeft, marginTop, marginRight, marginDown);
         layoutParams.weight = 1.0f;
 
-        if (newTextElement.getTextGravity().equals("right")) {
-            layoutParams.gravity = Gravity.RIGHT;
-        }
-        if (newTextElement.getTextGravity().equals("left")) {
-            layoutParams.gravity = Gravity.LEFT;
-        }
-        if (newTextElement.getTextGravity().equals("center")) {
-            layoutParams.gravity = Gravity.CENTER_HORIZONTAL;
-        }
-
         textView.setLayoutParams(layoutParams);
-
-        Typeface face = null;
-
-        if (!newTextElement.getTextFonts().equals("") && newTextElement.getTextFonts() != null) {
-            face = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + newTextElement.getTextFonts());
-        }
-        if (newTextElement.getTextTypeFace().equals("bold")) {
-            textView.setTypeface(face, Typeface.BOLD);
-        }
-        if (newTextElement.getTextTypeFace().equals("italic")) {
-            textView.setTypeface(face, Typeface.ITALIC);
-        }
-        if (newTextElement.getTextTypeFace().equals("bold_italic")) {
-            textView.setTypeface(face, Typeface.BOLD_ITALIC);
-        }
-        if (newTextElement.getTextTypeFace().equals("normal")) {
-            textView.setTypeface(face, Typeface.NORMAL);
-        }
         textView.setText(resultText);
 
         if (!newTextElement.getTextColor().equals("")) {

@@ -93,49 +93,54 @@ public class JSONLocalParser {
             JSONObject element = (JSONObject) elementsArray.get(i);
             Element newElement = null;
             String id = element.optString("id");
-            if (id.equals("settings_element")) {
-                newElement = new SettingsElement(
-                        element.optString("background_color"),
-                        element.getString("background_image"));
-            }else if (id.equals("text_element")) {
-                newElement = new TextElement(
-                        element.optString("text_content"),
-                        element.optString("text_color"),
-                        element.optInt("text_size"),
-                        element.getString("text_link"),
-                        element.getString("text_gravity"),
-                        element.getString("text_fonts"),
-                        element.getString("text_typeface"));
-            } else if (id.equals("button_element")) {
-                newElement = new ButtonElement(
-                        element.optString("button_text"),
-                        element.optInt("button_text_size"),
-                        element.optString("button_text_color"),
-                        element.optString("button_color"),
-                        element.optString("button_url"),
-                        element.optString("button_fragment"),
-                        element.optString("button_gravity"));
-            } else if (id.equals("image_element")) {
-                newElement = new ImageElement(
-                        element.optString("image_url"),
-                        element.optString("link_url"),
-                        element.optString("image_gravity"));
-            } else if (id.equals("native_ads_element")) {
-                newElement = new NativeAds(appContext);
-            } else if (id.equals("list_element")) {
-                newElement = new ListElement(
-                        element.optString("list_title"),
-                        element.optString("list_description"),
-                        element.optString("list_image_url"),
-                        element.optString("list_link_url"),
-                        element.optString("list_fragment"),
-                        element.optString("list_text_button"),
-                        element.optInt("list_text_size"),
-                        element.optString("list_button_text_color"),
-                        element.optString("list_button_color"),
-                        element.optInt("list_type"));
-            } else if (id.equals("native_offer_element")) {
-                newElement = new NativeOfferElement();
+            switch (id) {
+                case "settings_element":
+                    newElement = new SettingsElement(
+                            element.optString("background_color"),
+                            element.getString("background_image"));
+                    break;
+                case "text_element":
+                    newElement = new TextElement(
+                            element.optString("text_content"),
+                            element.optString("text_color"),
+                            element.optInt("text_size"),
+                            element.getString("text_link"));
+                    break;
+                case "button_element":
+                    newElement = new ButtonElement(
+                            element.optString("button_text"),
+                            element.optInt("button_text_size"),
+                            element.optString("button_text_color"),
+                            element.optString("button_color"),
+                            element.optString("button_url"),
+                            element.optString("button_fragment"),
+                            element.optString("button_gravity"));
+                    break;
+                case "image_element":
+                    newElement = new ImageElement(
+                            element.optString("image_url"),
+                            element.optString("link_url"),
+                            element.optString("image_gravity"));
+                    break;
+                case "native_ads_element":
+                    newElement = new NativeAds(appContext);
+                    break;
+                case "list_element":
+                    newElement = new ListElement(
+                            element.optString("list_title"),
+                            element.optString("list_description"),
+                            element.optString("list_image_url"),
+                            element.optString("list_link_url"),
+                            element.optString("list_fragment"),
+                            element.optString("list_text_button"),
+                            element.optInt("list_text_size"),
+                            element.optString("list_button_text_color"),
+                            element.optString("list_button_color"),
+                            element.optInt("list_type"));
+                    break;
+                case "native_offer_element":
+                    newElement = new NativeOfferElement();
+                    break;
             }
             if (newElement != null) {
                 resultList.add(newElement);
