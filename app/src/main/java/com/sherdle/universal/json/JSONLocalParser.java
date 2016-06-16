@@ -225,7 +225,7 @@ public class JSONLocalParser {
                 settingsVisible = jsonObject.optBoolean("settings_visible");
             }
         }
-        host = (Helper.IS_DEBUG ? "http://test.ru/" : "185.26.120.195:8001");
+        host = (Helper.IS_DEBUG ? "http://test.ru/" : "http://185.26.120.195:8001");
         SettingsObject settingsObject = new SettingsObject(
                 bannerID,
                 interstitialID,
