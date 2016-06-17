@@ -17,6 +17,7 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 
 import com.sherdle.universal.R;
+import com.sherdle.universal.activity.LoadingActivity;
 import com.sherdle.universal.activity.MainActivity;
 import com.sherdle.universal.db.objects.NotificationObject;
 
@@ -82,7 +83,7 @@ public class NotificationManager {
 
     public static void pushNotification(Context context) {
         List<NotificationObject> notificationObjectList = NotificationObject.listAll(NotificationObject.class);
-        Intent notificationIntent = new Intent(context, MainActivity.class);
+        Intent notificationIntent = new Intent(context, LoadingActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(context,
                 0, notificationIntent,
                 PendingIntent.FLAG_CANCEL_CURRENT);
