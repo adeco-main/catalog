@@ -22,7 +22,6 @@ catalog_adeco.iml
 gradle.properties
 gradle/
 gradlew
-gradlew.bat
 hs_err_pid745.log
 local.properties
 template.iml
